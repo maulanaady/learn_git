@@ -38,7 +38,7 @@ git diff
 git status -s
 git add step_by_step.sh
 git status -s
-git commit --amend -m 'Changed adding more instruction lines'
+git commit --amend -m 'Changed: adding more instruction lines'
 
 # We modified his last commit by using the amend operation and he is ready to push the changes. 
 # The Push operation stores data permanently to the Git repository. After a successful push operation, 
@@ -48,3 +48,8 @@ git show (commit id)
 
 #push to remote server
 git push -u origin main
+
+# Let say someone make changes to remote repository while we make change in local.
+# When we want to push our local changes to remote, it will failed because remote repository not synced with our local repo,
+# Now, we have to first update the local repository and only thereafter, he can push our own changes
+git pull
