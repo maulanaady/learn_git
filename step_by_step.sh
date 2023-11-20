@@ -7,11 +7,7 @@
 
 
 # create repositoy online (ex: at github.com)
-<<<<<<< HEAD
 # token: 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
-=======
-# token: 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
->>>>>>> 4f6aef5988588a8b20e71748a1ba72515698e8c6
 # on local machine, do following:
 echo "# learn_git" >> README.md
 git init
@@ -20,6 +16,19 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/maulanaady/learn_git.git
 git push -u origin main
+
+# Avoid merge commits for pulling
+# You pull the latest changes from a remote repository, and if these changes are divergent, 
+# then by default Git creates merge commits. We can avoid this via following settings.
+git config --global branch.autosetuprebase always
+
+# Setting default merge tool
+# Git does not provide a default merge tool for integrating conflicting changes into your working tree. 
+# We can set default merge tool by enabling following settings
+git config --global merge.tool vimdiff
+
+# To see all config, execute below:
+git config --list
 
 # check local repository
 git status -s
@@ -39,6 +48,7 @@ git diff
 # The amend operation changes the last commit including your commit message; it creates a new commit ID
 # Before amend operation, checks the commit log.
 # commits the new changes with -- amend operation and views the commit log:
+git log
 git status -s
 git add step_by_step.sh
 git status -s
@@ -53,7 +63,10 @@ git show (commit id)
 #push to remote server
 git push -u origin main
 
-# Let say someone make changes to remote repository while we make change in local.
+# Let say someone make changes to remote repository while we make changes in local.
 # When we want to push our local changes to remote, it will failed because remote repository not synced with our local repo,
 # Now, we have to first update the local repository and only thereafter, he can push our own changes
 git pull
+
+# Now, our local repository is fully synchronized with the remote repository. So we can safely push his changes
+git push -u origin main
