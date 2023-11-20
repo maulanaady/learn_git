@@ -7,7 +7,7 @@
 
 
 # create repositoy online (ex: at github.com)
-# token: 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
+# token: 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
 # on local machine, do following:
 echo "# learn_git" >> README.md
 git init
@@ -90,3 +90,12 @@ git stash list
 # Suppose you have resolved the customer escalation and you are back on your new feature looking for your half-done code, 
 # just execute the git stash pop command, to remove the changes from the stack and place them in the current working directory.
 git stash pop
+
+# Git - Move Operation
+# As the name suggests, the move operation moves a directory or a file from one location to another.
+# create file moving test and move to folder moved
+
+# To make these changes permanent, we have to push the modified directory structure to the remote repository so that 
+# other developers can see this
+git commit -m "Modified directory structure"
+git push -u origin main
