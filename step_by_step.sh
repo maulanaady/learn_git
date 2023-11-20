@@ -7,7 +7,11 @@
 
 
 # create repositoy online (ex: at github.com)
+<<<<<<< HEAD
 # token: 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
+=======
+# token: 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
+>>>>>>> 4f6aef5988588a8b20e71748a1ba72515698e8c6
 # on local machine, do following:
 echo "# learn_git" >> README.md
 git init
