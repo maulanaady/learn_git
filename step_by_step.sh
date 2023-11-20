@@ -70,3 +70,23 @@ git pull
 
 # Now, our local repository is fully synchronized with the remote repository. So we can safely push his changes
 git push -u origin main
+
+# Git stash
+# Suppose you are implementing a new feature for your product. Your code is in progress and suddenly a customer escalation comes. 
+# Because of this, you have to keep aside your new feature work for a few hours. You cannot commit your partial code and also 
+# cannot throw away your changes. So you need some temporary space, where you can store your partial changes and later on commit it.
+# In Git, the stash operation takes your modified tracked files, stages changes, and saves them on a stack of unfinished 
+# changes that you can reapply at any time
+# Now, you want to switch branches for customer escalation, but you don’t want to commit what you’ve been working on yet; 
+# so you’ll stash the changes. To push a new stash onto your stack, run the git stash command
+git stash
+
+# Now, your working directory is clean and all the changes are saved on a stack. Let us verify it with the git status command
+git status -s
+
+# Now you can safely switch the branch and work elsewhere. We can view a list of stashed changes by using the git stash list command
+git stash list
+
+# Suppose you have resolved the customer escalation and you are back on your new feature looking for your half-done code, 
+# just execute the git stash pop command, to remove the changes from the stack and place them in the current working directory.
+git stash pop
