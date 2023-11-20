@@ -97,5 +97,13 @@ git stash pop
 
 # To make these changes permanent, we have to push the modified directory structure to the remote repository so that 
 # other developers can see this
+git add step_by_step.sh
+git add moved/
 git commit -m "Modified directory structure"
 git push -u origin main
+
+# Git - Rename Operation
+git mv file_from file_to
+
+# We used -a flag, that makes git commit automatically detect the modified files
+git commit -a -m 'Renamed moving_test to moved_test '
